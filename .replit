@@ -20,6 +20,7 @@ args = "Careers Website"
 [[workflows.workflow]]
 name = "Careers Website"
 author = "agent"
+mode = "parallel"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
@@ -33,6 +34,15 @@ outputType = "webview"
 localPort = 5000
 externalPort = 80
 
+[[ports]]
+localPort = 8000
+externalPort = 8000
+
+[[ports]]
+localPort = 8080
+externalPort = 8080
+
 [deployment]
 deploymentTarget = "autoscale"
 run = ["python", "app.py"]
+
