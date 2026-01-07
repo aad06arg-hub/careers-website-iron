@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}{{ job.title if job else 'Job Not Found' }} - Careers{% endblock %}
+
+{% block content %}
+{% if job %}
+<section class="job-detail">
+    <a href="/" class="back-link">&larr; Back to all jobs</a>
+    <h1>{{ job.title }}</h1>
+    <div class="job-meta">
+        <span class="location">{{ job.location }}</span>
+        <span class="salary">{{ job.salary }}</span>
+    </div>
+    <div class="job-description">
+        <h2>About this role</h2>
+        <p>{{ job.description }}</p>
+    </div>
+    <div class="apply-section">
+        <h2>Interested?</h2>
+        <p>Apply now and take the next step in your career!</p>
+        <button class="btn btn-primary">Apply Now</button>
+    </div>
+</section>
+{% else %}
+<section class="not-found">
+    <h1>Job Not Found</h1>
+    <p>The job you're looking for doesn't exist.</p>
+    <a href="/" class="btn">View All Jobs</a>
+</section>
+{% endif %}
+{% endblock %}
