@@ -1,25 +1,38 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-{% block title %}Open Positions - Careers{% endblock %}
+  <style>
+    
+    #banner{
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+    }
 
-{% block content %}
-<section class="hero">
-    <h1>Join Our Team</h1>
-    <p>Discover exciting opportunities and grow your career with us.</p>
-</section>
+  </style>
+</head>
 
-<section class="jobs-section">
-    <h2>Open Positions</h2>
-    <div class="jobs-grid">
-        {% for job in jobs %}
-        <div class="job-card">
-            <h3>{{ job.title }}</h3>
-            <p class="location">{{ job.location }}</p>
-            <p class="salary">{{ job.salary }}</p>
-            <p class="description">{{ job.description }}</p>
-            <a href="/job/{{ job.id }}" class="btn">View Details</a>
-        </div>
-        {% endfor %}
+  
+<body>
+  <div class="container">
+      <h1 class="text-center mt-4 mb-4">Welcome to Careers Website</h1>
+    
+      <img class="img-fluid mb-4" id="banner" src="https://53c1ccd7-35fd-443e-8d0c-ac099bad3965-00-2xw24xwiw4x4g.kirk.replit.dev/static/banner2.jpg">
+    
+      <p class="lead">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comm lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comm </p>
+    
+      <h2 class="text-center mt-4 mb-4"> Streaming Movies and TV Shows </h2>
+      <p class="text-center mb-2"> Tudum - Netflix and Chill </p>
+  </div>
+    <div class="text-center mt-4">  
+      <button class="btn btn-outline-info"> Contact Netflix </button>
     </div>
-</section>
-{% endblock %}
+
+</body>
+</html>
