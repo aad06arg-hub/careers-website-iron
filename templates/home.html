@@ -28,7 +28,11 @@
       <p class="lead">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comm lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comm </p>
     
       <h2 class="text-center mt-4 mb-4"> Streaming Movies and TV Shows </h2>
-      <p class="text-center mb-2"> Tudum - Netflix and Chill </p>
+      <p class="text-center mb-2">
+      {% for job in jobs %}
+         {% include 'jobs.html' %}
+      {% endfor %}
+      </p>
   </div>
     <div class="text-center mt-4">  
       <button class="btn btn-outline-info"> Contact Netflix </button>
